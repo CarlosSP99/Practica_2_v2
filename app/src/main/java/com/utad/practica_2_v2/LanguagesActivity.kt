@@ -23,10 +23,17 @@ class LanguagesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLanguagesBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityLanguagesBinding.inflate(layoutInflater)
-        super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        super.onCreate(savedInstanceState)
+
+        binding = ActivityLanguagesBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         binding.rvLanguages.layoutManager = LinearLayoutManager(this)
         adapter = LanguagesAdapter(languagesList)
@@ -36,8 +43,6 @@ class LanguagesActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-
 
     override fun onResume() {
         super.onResume()
