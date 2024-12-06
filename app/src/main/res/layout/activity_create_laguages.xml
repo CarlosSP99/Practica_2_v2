@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.9"
+    android:background="@drawable/fondo"
+
+    tools:context=".CreateLaguagesActivity">
+
+
+    <EditText
+        android:id="@+id/etNameLanguague"
+        android:layout_width="248dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="20dp"
+        android:alpha="0.8"
+        android:background="@drawable/roundedcorner"
+        android:ems="10"
+        android:padding="10dp"
+        android:hint="@string/Lenguaje"
+        android:inputType="text"
+        android:textColor="@color/black"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCrear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/blue"
+        android:enabled="false"
+        android:text="@string/Crear"
+        app:cornerRadius="23dp"
+        app:layout_constraintEnd_toEndOf="@+id/etNameLanguague"
+        app:layout_constraintStart_toStartOf="@+id/etNameLanguague"
+        app:layout_constraintTop_toBottomOf="@+id/etNameLanguague" />
+
+
+    <ImageView
+        android:id="@+id/textView"
+        android:layout_width="248dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/lenguaje"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

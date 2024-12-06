@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Practica_2_v2</string>
+    <string name="password">Password</string>
+    <string name="user">User</string>
+    <string name="log_in">Log In</string>
+    <string name="sing_in">Sing Up</string>
+    <string name="repetir_password">Repetir password</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="Lenguaje">Introduzca un lenguaje</string>
+    <string name="Crear">Crear</string>
+    <string name="create_language">create_language</string>
+    <string name="language">language</string>
+</resources>
